@@ -122,50 +122,25 @@ export default function Home() {
               tools ensure reliability for both large-scale and niche
               applications.
             </p>
-            <div className="flex items-center gap-4">
-              <div className="text-[#FFD700]">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="12" cy="12" r="5" fill="currentColor" />
-                </svg>
-              </div>
-              <div className="text-gray-600">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <circle cx="12" cy="12" r="8" />
-                  <path d="M12 8v8M8 12h8" />
-                </svg>
-              </div>
-              <div className="mt-4">
-                <svg
-                  width="80"
-                  height="80"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <rect x="4" y="5" width="16" height="16" rx="2" />
-                  <path d="M16 3v4M8 3v4M4 11h16M9 16h6M12 14v4" />
-                  <circle cx="12" cy="7" r="2" />
-                </svg>
-              </div>
+              <div className="flex items-center gap-4">
+                <div className="text-[#FFD700]">
+                <Image
+                src="/icon1.png"
+                alt="icon"
+                width={100}
+                height={100}
+                className="rounded-lg object-cover h-[100px] w-[100px]"
+              />
+                </div>
+                <div className="text-gray-600">
+                <Image
+                src="/icon4.png"
+                alt="icon"
+                width={100}
+                height={100}
+                className="rounded-lg object-cover h-[100px] w-[100px]"
+              />
+                </div>
             </div>
           </div>
 
@@ -173,11 +148,11 @@ export default function Home() {
           <div className="md:col-span-4">
             <div className="mt-4">
               <Image
-                src="/placeholder.svg?height=300&width=400"
+                src="/pic1.jpg"
                 alt="Precision tools"
                 width={400}
                 height={300}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover h-[300px] w-[400px]"
               />
             </div>
           </div>
@@ -192,11 +167,11 @@ export default function Home() {
           <div className="md:col-span-4">
             <div className="mb-4">
               <Image
-                src="/placeholder.svg?height=250&width=350"
+                src="/pic2.png"
                 alt="Screws and fasteners"
                 width={350}
                 height={250}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover h-[250px] w-[350px]"
               />
             </div>
             <h3 className="text-2xl font-medium text-gray-700 mb-2">
@@ -208,11 +183,11 @@ export default function Home() {
           <div className="md:col-span-4">
             <div>
               <Image
-                src="/placeholder.svg?height=300&width=350"
+                src="/pic3.jpeg"
                 alt="Drilling machine"
                 width={350}
                 height={300}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover h-[300px] w-[350px]"
               />
             </div>
           </div>
@@ -232,27 +207,22 @@ export default function Home() {
             </button>
             <div className="flex items-center gap-4 mt-4">
               <div className="text-gray-500">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M14 6l-8.6 8.6M12 6h2v2M10 18H8v-2M3 3l18 18" />
-                </svg>
+              <Image
+                src="/icon2.png"
+                alt="Drilling machine"
+                width={100}
+                height={100}
+                className="rounded-lg object-cover h-[100px] w-[100px]"
+              />
               </div>
               <div className="text-[#FFD700]">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2L2 12h4v10h12V12h4L12 2z" />
-                  <path d="M9 14h6v8H9z" fill="currentColor" />
-                </svg>
+              <Image
+                src="/icon3.png"
+                alt="icon"
+                width={100}
+                height={100}
+                className="rounded-lg object-cover h-[100px] w-[100px]"
+              />
               </div>
             </div>
           </div>
