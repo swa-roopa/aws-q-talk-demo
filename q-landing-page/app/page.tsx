@@ -14,34 +14,16 @@ export default function Home() {
 
   const generateWebUrl = async () => {
   try {
-
-
-    // Initialize the QBusiness client
-    const client = new QBusinessClient({ 
-      region: "us-east-1",
-      credentials: {
-        accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID || '',
-        secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY || '/Q11UaJj7XIs',
-        sessionToken: process.env.NEXT_PUBLIC_AWS_SESSION_TOKEN || ''
-      }
-    });
-    
-    // Create the command with required parameters
-    const command = new CreateAnonymousWebExperienceUrlCommand({
-      applicationId: '', // Replace with your actual application ID
-      webExperienceId: '', // Replace with your actual web experience ID
-      sessionDurationInMinutes: 60 // Replace with your desired session duration
-    });
-
-    setShowChat(true);
     
     // Execute the command
-    const response = await client.send(command);
+    const response = await fetch('')
     
+    const data = await response.json();
+    setShowChat(true);
     
     // Set the web URL from the response
-    if (response.anonymousUrl) {
-      setWebUrl(response.anonymousUrl);
+    if (response) {
+      setWebUrl(data.url);
     }
     
     return;
@@ -241,7 +223,7 @@ export default function Home() {
 
       {/* Chat Popup */}
       {showChat && (
-        <div className="fixed bottom-20 right-6 bg-white rounded-lg shadow-xl p-4 w-80 z-50 border border-gray-200">
+        <div className="fixed bottom-20 right-6 bg-white rounded-lg shadow-xl p-4 w-[450px] z-50 border border-gray-200">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-medium">Chat with us</h3>
             <button onClick={() => setShowChat(!showChat)} className="text-gray-500">
@@ -249,8 +231,8 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex min-h-[500px]">
-            <iframe src={webUrl} />
+          <div className="flex min-h-[600px] ">
+            <iframe src={webUrl} className="min-w-[400px]" />
           </div>
         </div>
       )}
